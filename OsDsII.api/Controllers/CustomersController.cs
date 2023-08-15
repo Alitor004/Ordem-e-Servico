@@ -90,7 +90,7 @@ namespace OsDsII.api.Controllers
         }
 
         [HttpPut]
-        public async Task<IActionResult> AtualizarCustomer(int id)
+        public async Task<IActionResult> AtualizarCustomer(int id, Customer customer)
         {
             try
             {
