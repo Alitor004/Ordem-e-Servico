@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+
 using OsDsII.api.Models;
 using OsDsII.api.Data;
-using Microsoft.EntityFrameworkCore;
 
 namespace OsDsII.api.Controllers
 {
@@ -42,7 +43,13 @@ namespace OsDsII.api.Controllers
             {
                 Customer customer = await _context.Customers.FirstOrDefaultAsync(customerBusca => customerBusca.Id == id);
                 
+                
+                if(customer == null)
+                {
+                    return NotFound();
+                }
                 return Ok(customer);
+
             }
             catch (System.Exception ex)
             {
@@ -51,19 +58,18 @@ namespace OsDsII.api.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> AddCustomer(Customer newCustomer)
+        public async Task<IActionResult> AddCustomer([FromBody]Customer newCustomer)
         {
             try
             {
                 Customer customer = await _context.Customers.FirstOrDefaultAsync(customerBusca => customerBusca.Id == newCustomer.Id);
-                if(customer == null && customer.Equals(newCustomer))
+                if(customer != null && customer.Equals(newCustomer))
                 {
-                    throw;
+                    return BadRequest("Usuárioa já existe");
                 }
 
-                await _context.Customers.AddAsync(newCustomer);
+                await _context.AddAsync(newCustomer);
                 await _context.SaveChangesAsync();
-                
                 return Ok(newCustomer);
             }
             catch (System.Exception ex)
@@ -94,9 +100,9 @@ namespace OsDsII.api.Controllers
         {
             try
             {
-                Customer customer = await _context.Customers.FirstOrDefaultAsync(customerBusca => customerBusca.Id == id);
+                Customer currentCustomer = await _context.Customers.FirstOrDefaultAsync(customerBusca => customerBusca.Id == id);
 
-                _context.Customers.Update(customer);
+                _context.Customers.Update(currentCustomer);
                 await _context.SaveChangesAsync();
                 
                 return Ok(customer);
