@@ -7,6 +7,7 @@ using Microsoft.EntityFrameworkCore;
 
 using OsDsII.api.Models;
 using OsDsII.api.Data;
+using OsDsII.api.Repositories.Interfaces;
 
 namespace OsDsII.api.Controllers
 {
@@ -15,10 +16,12 @@ namespace OsDsII.api.Controllers
     public class CustomersController : ControllerBase
     {
         private readonly DataContext _context;
+        private readonly ICustomersRepository _customersRepository;
 
-        public CustomersController(DataContext context)
+        public CustomersController(DataContext context, ICustomersRepository cuustomersRepository)
         {
             _context = context;
+            _customersRepository = cuustomersRepository;
         }
 
         [HttpGet("GetAll")]
@@ -26,8 +29,7 @@ namespace OsDsII.api.Controllers
         {
             try
             {
-                List<Customer> listaDeCustomer = await _context.Customers
-                    .ToListAsync();
+                IEnumerable<Customer> listaDeCustomer = await _customersRepository.GetAllCustomersAsync();
                 return Ok(listaDeCustomer);
             }
             catch (System.Exception ex)
