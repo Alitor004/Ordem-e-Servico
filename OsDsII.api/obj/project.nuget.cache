@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "m8dmpfDEVDqFkuQ5uIp27pULkGFCVl9FOr3BlxG67Dwhdavx/duDDm4Dw+2CoezbARRJMKkHan5Pz6ROfbXgrA==",
+  "dgSpecHash": "NGJgHvT9kn6f4Vv8MiULfehk74MptWpxon1tDIpztO+FOgMgN2pwV/gJMMrLTOtSpuYEcurXSNHpHSAdvlITfg==",
   "success": true,
-  "projectFilePath": "A:\\Alex DS3\\DS2\\Ordem e Serviço\\OSDSII\\OsDsII.api\\OsDsII.api.csproj",
+  "projectFilePath": "a:\\Alex DS3\\DS2\\Ordem e Serviço\\OSDSII\\OsDsII.api\\OsDsII.api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\etechas\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\etechas\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.8\\microsoft.aspnetcore.openapi.7.0.8.nupkg.sha512",

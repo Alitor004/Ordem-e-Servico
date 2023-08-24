@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore;
 
 using OsDsII.api.Models;
 using OsDsII.api.Data;
-using OsDsII.api.Repositories.Interfaces;
+using OsDsII.api.Services.Interfaces;
 
 namespace OsDsII.api.Controllers
 {
@@ -16,12 +16,12 @@ namespace OsDsII.api.Controllers
     public class CustomersController : ControllerBase
     {
         private readonly DataContext _context;
-        private readonly ICustomersRepository _customersRepository;
+        private readonly ICustomersService _customersService;
 
-        public CustomersController(DataContext context, ICustomersRepository cuustomersRepository)
+        public CustomersController(DataContext context, ICustomersService cuustomersService)
         {
             _context = context;
-            _customersRepository = cuustomersRepository;
+            _customersService = cuustomersService;
         }
 
         [HttpGet("GetAll")]
@@ -29,7 +29,7 @@ namespace OsDsII.api.Controllers
         {
             try
             {
-                IEnumerable<Customer> listaDeCustomer = await _customersRepository.GetAllCustomersAsync();
+                IEnumerable<Customer> listaDeCustomer = await _customersService.GetAllCustomersAsync();
                 return Ok(listaDeCustomer);
             }
             catch (System.Exception ex)
@@ -39,21 +39,15 @@ namespace OsDsII.api.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<IActionResult> GetById(int id)
+        public async Task<IActionResult> GetCustomerByIdAsync(int id)
         {
             try
-            {
-                Customer customer = await _context.Customers.FirstOrDefaultAsync(customerBusca => customerBusca.Id == id);
-                
-                
-                if(customer == null)
-                {
-                    return NotFound();
-                }
-                return Ok(customer);
 
+            {
+                Customer customer = await _customersService.GetCustomerByIdAsync(id);
+                return Ok(customer);
             }
-            catch (System.Exception ex)
+            catch (Exception ex)
             {
                 return BadRequest(ex.Message);
             }
