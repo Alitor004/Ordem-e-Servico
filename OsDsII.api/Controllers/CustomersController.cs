@@ -1,113 +1,133 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
-using OsDsII.api.Models;
+using Microsoft.AspNetCore.Mvc;
+
 using OsDsII.api.Data;
 
-namespace OsDsII.api.Controllers
-{
-    [Route("[controller]")]
-    [ApiController]
-    public class CustomersController : ControllerBase
-    {
-        private readonly DataContext _context;
+using OsDsII.api.Models;
 
-        public CustomersController(DataContext context)
+using OsDsII.api.Services.Interfaces;
+
+namespace OsDsII.api.Controllers
+
+{
+
+    [ApiController]
+
+    [Route("[controller]")]
+
+    public class CustomersController : ControllerBase
+
+    {
+
+        private readonly DataContext _dataContext;
+
+        private readonly ICustomersService _customersService;
+
+        public CustomersController(DataContext dataContext, ICustomersService customersService)
+
         {
-            _context = context;
+
+            _dataContext = dataContext;
+
+            _customersService = customersService;
+
         }
 
-        [HttpGet("GetAll")]
-        public async Task<IActionResult> GetAll()
+        [HttpGet]
+
+        public async Task<IActionResult> GetAllAsync()
+
         {
+
             try
+
             {
-                List<Customer> listaDeCustomer = await _context.Customers
-                    .ToListAsync();
-                return Ok(listaDeCustomer);
+
+                IEnumerable<Customer> customers = await _customersService.GetAllCustomersAsync();
+
+                return Ok(customers);
+
             }
-            catch (System.Exception ex)
+
+            catch (Exception ex)
+
             {
+
                 return BadRequest(ex.Message);
+
             }
+
         }
 
         [HttpGet("{id}")]
-        public async Task<IActionResult> GetById(int id)
+
+        public async Task<IActionResult> GetCustomerByIdAsync(int id)
         {
             try
             {
-                Customer customer = await _context.Customers.FirstOrDefaultAsync(customerBusca => customerBusca.Id == id);
-                
-                
-                if(customer == null)
-                {
-                    return NotFound();
-                }
-                return Ok(customer);
+                Customer customer = await _customersService.GetCustomerByIdAsync(id);
 
+                return Ok(customer);
             }
-            catch (System.Exception ex)
+            catch (Exception ex)
             {
                 return BadRequest(ex.Message);
             }
         }
 
         [HttpPost]
-        public async Task<IActionResult> AddCustomer([FromBody]Customer newCustomer)
+        public async Task<IActionResult> CreateCustomer([FromBody] Customer customer)
         {
             try
             {
-                Customer customer = await _context.Customers.FirstOrDefaultAsync(customerBusca => customerBusca.Id == newCustomer.Id);
-                if(customer != null && customer.Equals(newCustomer))
-                {
-                    return BadRequest("Usuárioa já existe");
-                }
+                Customer currentCustomer = await _customersService.CreateCustomerAsync(c => c.Id == customer.Id);
 
-                await _context.AddAsync(newCustomer);
-                await _context.SaveChangesAsync();
-                return Ok(newCustomer);
+                await _dataContext.AddAsync(customer);
+                await _dataContext.SaveChangesAsync();
+                return Ok(customer);
             }
-            catch (System.Exception ex)
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpPut("{id}")]
+        public async Task<IActionResult> UpdateCustomerAsync(int id, [FromBody] Customer customer)
+        {
+            try
+            {
+                Customer currentCustomer = await _customersService.UpdateCustomerAsync(id, customer);
+
+                currentCustomer.Name = customer.Name;
+                currentCustomer.Email = customer.Email;
+                currentCustomer.Phone = customer.Phone;
+                await _dataContext.SaveChangesAsync();
+                return Ok();
+            }
+            catch (Exception ex)
             {
                 return BadRequest(ex.Message);
             }
         }
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteById(int id)
+        public async Task<IActionResult> DeleteCustomerAsync(int id)
         {
             try
             {
-                Customer deleteCustomer = await _context.Customers.FirstOrDefaultAsync(customerBusca => customerBusca.Id == id);
+                Customer customer = await _dataContext.Customers.FirstOrDefaultAsync(c => id == c.Id);
 
-                _context.Customers.Remove(deleteCustomer);
-                await _context.SaveChangesAsync();
-                return Ok(deleteCustomer);
+                if (customer is null)
+                {
+                    throw new Exception("Not found");
+                }
+                _dataContext.Customers.Remove(customer);
+                await _dataContext.SaveChangesAsync();
+                return Ok();
             }
-            catch (System.Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
-        }
-
-        [HttpPut]
-        public async Task<IActionResult> AtualizarCustomer(int id, Customer customer)
-        {
-            try
-            {
-                Customer currentCustomer = await _context.Customers.FirstOrDefaultAsync(customerBusca => customerBusca.Id == id);
-
-                _context.Customers.Update(currentCustomer);
-                await _context.SaveChangesAsync();
-                
-                return Ok(customer);
-            }
-            catch (System.Exception ex)
+            catch (Exception ex)
             {
                 return BadRequest(ex.Message);
             }
@@ -122,4 +142,5 @@ namespace OsDsII.api.Controllers
 
 
     }
+
 }
