@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc;
 
@@ -19,10 +20,27 @@ namespace OsDsII.api.Services
         {
             _context = context;
             _custumersRepository = customersRepository;
+=======
+using OsDsII.api.Models;
+using OsDsII.api.Services.Interfaces;
+
+
+
+namespace OsDsII.api.Services
+{
+    public class CustomersService : ICustomersService
+    {
+        private readonly  ContomersRepository ;
+
+        public CustumersRepository( )
+        {
+            
+>>>>>>> 835e8e1425c4562ec45c06d9a77547c98f3f2bb9
         }
 
         public async Task<IEnumerable<Customer>> GetAllCustomersAsync()
         {
+<<<<<<< HEAD
             IEnumerable<Customer> customers = await _custumersRepository.GetAllCustomersAsync();
             return customers;
         }
@@ -58,5 +76,10 @@ namespace OsDsII.api.Services
             }
             return customer;
         }
+=======
+            IEnumerable<Customer> customers = await _context.Customers.ToListAsync();
+            return customers;
+        }
+>>>>>>> 835e8e1425c4562ec45c06d9a77547c98f3f2bb9
     }
 }

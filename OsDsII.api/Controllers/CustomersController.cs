@@ -3,7 +3,9 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc;
 
 using OsDsII.api.Data;
+using OsDsII.api.Repositories.Interfaces;
 
+<<<<<<< HEAD
 using OsDsII.api.Models;
 
 using OsDsII.api.Services.Interfaces;
@@ -32,6 +34,21 @@ namespace OsDsII.api.Controllers
 
             _customersService = customersService;
 
+=======
+namespace OsDsII.api.Controllers
+{
+    [Route("[controller]")]
+    [ApiController]
+    public class CustomersController : ControllerBase
+    {
+        private readonly DataContext _context;
+        private readonly ICustomersRepository _customersRepository;
+
+        public CustomersController(DataContext context, ICustomersRepository cuustomersRepository)
+        {
+            _context = context;
+            _customersRepository = cuustomersRepository;
+>>>>>>> 835e8e1425c4562ec45c06d9a77547c98f3f2bb9
         }
 
         [HttpGet]
@@ -43,11 +60,16 @@ namespace OsDsII.api.Controllers
             try
 
             {
+<<<<<<< HEAD
 
                 IEnumerable<Customer> customers = await _customersService.GetAllCustomersAsync();
 
                 return Ok(customers);
 
+=======
+                IEnumerable<Customer> listaDeCustomer = await _customersRepository.GetAllCustomersAsync();
+                return Ok(listaDeCustomer);
+>>>>>>> 835e8e1425c4562ec45c06d9a77547c98f3f2bb9
             }
 
             catch (Exception ex)
