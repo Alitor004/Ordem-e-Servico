@@ -1,3 +1,5 @@
+using Microsoft.AspNetCore.Http.HttpResults;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc;
 
@@ -27,5 +29,21 @@ namespace OsDsII.api.Repositories
             Customer customer = await _context.Customers.FirstOrDefaultAsync(c => c.Id == id);
             return customer;
         }
+
+        public async Task<Customer> CreateCustomerAsync([FromBody] Customer newCustomer)
+        {
+            Customer currentCustomer = await _context.Customers.FirstOrDefaultAsync(newCustomer);
+            
+            return newCustomer;
+        }
+
+        public async Task<Customer> UpdateCustomerAsync(int id, [FromBody] Customer customer)
+        {
+            Customer currentCustomer = await _context.Customers.FirstOrDefaultAsync(customerBusca => customerBusca.Id == id);
+            return customer;
+        }
+
+
+
     }
 }

@@ -41,3 +41,13 @@ A:\Alex DS3\DS2\Ordem e Serviço\OSDSII\OsDsII.api\bin\Debug\net7.0\Microsoft.En
 A:\Alex DS3\DS2\Ordem e Serviço\OSDSII\OsDsII.api\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
 A:\Alex DS3\DS2\Ordem e Serviço\OSDSII\OsDsII.api\bin\Debug\net7.0\Mono.TextTemplating.dll
 A:\Alex DS3\DS2\Ordem e Serviço\OSDSII\OsDsII.api\bin\Debug\net7.0\System.CodeDom.dll
+A:\Alex DS3\DS2\Ordem e Serviço\OsDsII.api\obj\Debug\net7.0\OsDsII.api.csproj.AssemblyReference.cache
+A:\Alex DS3\DS2\Ordem e Serviço\OsDsII.api\obj\Debug\net7.0\OsDsII.api.GeneratedMSBuildEditorConfig.editorconfig
+A:\Alex DS3\DS2\Ordem e Serviço\OsDsII.api\obj\Debug\net7.0\OsDsII.api.AssemblyInfoInputs.cache
+A:\Alex DS3\DS2\Ordem e Serviço\OsDsII.api\obj\Debug\net7.0\OsDsII.api.AssemblyInfo.cs
+A:\Alex DS3\DS2\Ordem e Serviço\OsDsII.api\obj\Debug\net7.0\OsDsII.api.csproj.CoreCompileInputs.cache
+A:\Alex DS3\DS2\Ordem e Serviço\OsDsII.api\obj\Debug\net7.0\OsDsII.api.MvcApplicationPartsAssemblyInfo.cs
+A:\Alex DS3\DS2\Ordem e Serviço\OsDsII.api\obj\Debug\net7.0\OsDsII.api.MvcApplicationPartsAssemblyInfo.cache
+A:\Alex DS3\DS2\Ordem e Serviço\OsDsII.api\obj\Debug\net7.0\OsDsII.api.dll
+A:\Alex DS3\DS2\Ordem e Serviço\OsDsII.api\obj\Debug\net7.0\refint\OsDsII.api.dll
+A:\Alex DS3\DS2\Ordem e Serviço\OsDsII.api\obj\Debug\net7.0\OsDsII.api.pdb

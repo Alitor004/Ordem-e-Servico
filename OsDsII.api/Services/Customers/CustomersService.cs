@@ -1,18 +1,24 @@
+using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Mvc;
+
+using OsDsII.api.Data;
 using OsDsII.api.Models;
 using OsDsII.api.Services.Interfaces;
-using OsDsII.api.Repositories;
-
-
+using OsDsII.api.Repositories.Interfaces;
+using Microsoft.AspNetCore.Http.HttpResults;
 
 namespace OsDsII.api.Services
 {
-    public class CustomersService : ICustomersService
+    public class CustumersService : ICustomersService
     {
-        private readonly  CustumersRepository _custumersRepository;
+        private readonly DataContext _context;
 
-        public CustomersService( CustumersRepository custumersRepository )
+        private readonly ICustomersRepository _custumersRepository;
+
+        public CustumersService(DataContext context, ICustomersRepository customersRepository)
         {
-            _custumersRepository = custumersRepository;
+            _context = context;
+            _custumersRepository = customersRepository;
         }
 
         public async Task<IEnumerable<Customer>> GetAllCustomersAsync()
@@ -24,11 +30,33 @@ namespace OsDsII.api.Services
         public async Task<Customer> GetCustomerByIdAsync(int id)
         {
             Customer customer = await _custumersRepository.GetCustomerByIdAsync(id);
-            if(customer == null)
-                {
-                    return NotFound();
-                }
-                return customer;
+            if (customer == null)
+            {
+                return NotFound();
+            }
+            return customer;
+        }
+
+        public async Task<Customer> CreateCustomerAsync([FromBody] Customer newCustomer)
+        {
+            Customer currentCustomer = await _custumersRepository.CreateCustomerAsync(newCustomer);
+
+            if (currentCustomer != null)
+            {
+                return BadRequest("Usuário já existe");
+            }
+            return newCustomer;
+        }
+
+        public async Task<Customer> UpdateCustomerAsync(int id, [FromBody] Customer customer)
+        {
+            Customer currentCustomer = await _custumersRepository.UpdateCustomerAsync(id, customer);
+
+            if (currentCustomer is null)
+            {
+                throw new Exception("Not found");
+            }
+            return customer;
         }
     }
 }

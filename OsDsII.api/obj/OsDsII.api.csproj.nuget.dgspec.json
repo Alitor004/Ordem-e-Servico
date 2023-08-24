@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "a:\\Alex DS3\\DS2\\Ordem e Serviço\\OSDSII\\OsDsII.api\\OsDsII.api.csproj": {}
+    "A:\\Alex DS3\\DS2\\Ordem e Serviço\\OsDsII.api\\OsDsII.api.csproj": {}
   },
   "projects": {
-    "a:\\Alex DS3\\DS2\\Ordem e Serviço\\OSDSII\\OsDsII.api\\OsDsII.api.csproj": {
+    "A:\\Alex DS3\\DS2\\Ordem e Serviço\\OsDsII.api\\OsDsII.api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "a:\\Alex DS3\\DS2\\Ordem e Serviço\\OSDSII\\OsDsII.api\\OsDsII.api.csproj",
+        "projectUniqueName": "A:\\Alex DS3\\DS2\\Ordem e Serviço\\OsDsII.api\\OsDsII.api.csproj",
         "projectName": "OsDsII.api",
-        "projectPath": "a:\\Alex DS3\\DS2\\Ordem e Serviço\\OSDSII\\OsDsII.api\\OsDsII.api.csproj",
+        "projectPath": "A:\\Alex DS3\\DS2\\Ordem e Serviço\\OsDsII.api\\OsDsII.api.csproj",
         "packagesPath": "C:\\Users\\etechas\\.nuget\\packages\\",
-        "outputPath": "a:\\Alex DS3\\DS2\\Ordem e Serviço\\OSDSII\\OsDsII.api\\obj\\",
+        "outputPath": "A:\\Alex DS3\\DS2\\Ordem e Serviço\\OsDsII.api\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -49,6 +49,10 @@
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[7.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.10, )"
             },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
