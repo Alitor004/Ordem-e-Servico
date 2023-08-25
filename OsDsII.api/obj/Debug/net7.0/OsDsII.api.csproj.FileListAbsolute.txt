@@ -51,3 +51,46 @@ A:\Alex DS3\DS2\Ordem e Serviço\OsDsII.api\obj\Debug\net7.0\OsDsII.api.MvcAppli
 A:\Alex DS3\DS2\Ordem e Serviço\OsDsII.api\obj\Debug\net7.0\OsDsII.api.dll
 A:\Alex DS3\DS2\Ordem e Serviço\OsDsII.api\obj\Debug\net7.0\refint\OsDsII.api.dll
 A:\Alex DS3\DS2\Ordem e Serviço\OsDsII.api\obj\Debug\net7.0\OsDsII.api.pdb
+C:\Users\alevi\OneDrive\Área de Trabalho\Estudos\Ordem-e-Servico\OsDsII.api\bin\Debug\net7.0\appsettings.Development.json
+C:\Users\alevi\OneDrive\Área de Trabalho\Estudos\Ordem-e-Servico\OsDsII.api\bin\Debug\net7.0\appsettings.json
+C:\Users\alevi\OneDrive\Área de Trabalho\Estudos\Ordem-e-Servico\OsDsII.api\bin\Debug\net7.0\OsDsII.api.exe
+C:\Users\alevi\OneDrive\Área de Trabalho\Estudos\Ordem-e-Servico\OsDsII.api\bin\Debug\net7.0\OsDsII.api.deps.json
+C:\Users\alevi\OneDrive\Área de Trabalho\Estudos\Ordem-e-Servico\OsDsII.api\bin\Debug\net7.0\OsDsII.api.runtimeconfig.json
+C:\Users\alevi\OneDrive\Área de Trabalho\Estudos\Ordem-e-Servico\OsDsII.api\bin\Debug\net7.0\OsDsII.api.dll
+C:\Users\alevi\OneDrive\Área de Trabalho\Estudos\Ordem-e-Servico\OsDsII.api\bin\Debug\net7.0\OsDsII.api.pdb
+C:\Users\alevi\OneDrive\Área de Trabalho\Estudos\Ordem-e-Servico\OsDsII.api\bin\Debug\net7.0\Humanizer.dll
+C:\Users\alevi\OneDrive\Área de Trabalho\Estudos\Ordem-e-Servico\OsDsII.api\bin\Debug\net7.0\Microsoft.AspNetCore.OpenApi.dll
+C:\Users\alevi\OneDrive\Área de Trabalho\Estudos\Ordem-e-Servico\OsDsII.api\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\alevi\OneDrive\Área de Trabalho\Estudos\Ordem-e-Servico\OsDsII.api\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\alevi\OneDrive\Área de Trabalho\Estudos\Ordem-e-Servico\OsDsII.api\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\alevi\OneDrive\Área de Trabalho\Estudos\Ordem-e-Servico\OsDsII.api\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\alevi\OneDrive\Área de Trabalho\Estudos\Ordem-e-Servico\OsDsII.api\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\alevi\OneDrive\Área de Trabalho\Estudos\Ordem-e-Servico\OsDsII.api\bin\Debug\net7.0\Microsoft.OpenApi.dll
+C:\Users\alevi\OneDrive\Área de Trabalho\Estudos\Ordem-e-Servico\OsDsII.api\bin\Debug\net7.0\Mono.TextTemplating.dll
+C:\Users\alevi\OneDrive\Área de Trabalho\Estudos\Ordem-e-Servico\OsDsII.api\bin\Debug\net7.0\MySqlConnector.dll
+C:\Users\alevi\OneDrive\Área de Trabalho\Estudos\Ordem-e-Servico\OsDsII.api\bin\Debug\net7.0\Pomelo.EntityFrameworkCore.MySql.dll
+C:\Users\alevi\OneDrive\Área de Trabalho\Estudos\Ordem-e-Servico\OsDsII.api\bin\Debug\net7.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\alevi\OneDrive\Área de Trabalho\Estudos\Ordem-e-Servico\OsDsII.api\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\alevi\OneDrive\Área de Trabalho\Estudos\Ordem-e-Servico\OsDsII.api\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\alevi\OneDrive\Área de Trabalho\Estudos\Ordem-e-Servico\OsDsII.api\bin\Debug\net7.0\System.CodeDom.dll
+C:\Users\alevi\OneDrive\Área de Trabalho\Estudos\Ordem-e-Servico\OsDsII.api\obj\Debug\net7.0\OsDsII.api.csproj.AssemblyReference.cache
+C:\Users\alevi\OneDrive\Área de Trabalho\Estudos\Ordem-e-Servico\OsDsII.api\obj\Debug\net7.0\OsDsII.api.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\alevi\OneDrive\Área de Trabalho\Estudos\Ordem-e-Servico\OsDsII.api\obj\Debug\net7.0\OsDsII.api.AssemblyInfoInputs.cache
+C:\Users\alevi\OneDrive\Área de Trabalho\Estudos\Ordem-e-Servico\OsDsII.api\obj\Debug\net7.0\OsDsII.api.AssemblyInfo.cs
+C:\Users\alevi\OneDrive\Área de Trabalho\Estudos\Ordem-e-Servico\OsDsII.api\obj\Debug\net7.0\OsDsII.api.csproj.CoreCompileInputs.cache
+C:\Users\alevi\OneDrive\Área de Trabalho\Estudos\Ordem-e-Servico\OsDsII.api\obj\Debug\net7.0\OsDsII.api.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\alevi\OneDrive\Área de Trabalho\Estudos\Ordem-e-Servico\OsDsII.api\obj\Debug\net7.0\OsDsII.api.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\alevi\OneDrive\Área de Trabalho\Estudos\Ordem-e-Servico\OsDsII.api\obj\Debug\net7.0\staticwebassets\msbuild.OsDsII.api.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\alevi\OneDrive\Área de Trabalho\Estudos\Ordem-e-Servico\OsDsII.api\obj\Debug\net7.0\staticwebassets\msbuild.build.OsDsII.api.props
+C:\Users\alevi\OneDrive\Área de Trabalho\Estudos\Ordem-e-Servico\OsDsII.api\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.OsDsII.api.props
+C:\Users\alevi\OneDrive\Área de Trabalho\Estudos\Ordem-e-Servico\OsDsII.api\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.OsDsII.api.props
+C:\Users\alevi\OneDrive\Área de Trabalho\Estudos\Ordem-e-Servico\OsDsII.api\obj\Debug\net7.0\staticwebassets.pack.json
+C:\Users\alevi\OneDrive\Área de Trabalho\Estudos\Ordem-e-Servico\OsDsII.api\obj\Debug\net7.0\staticwebassets.build.json
+C:\Users\alevi\OneDrive\Área de Trabalho\Estudos\Ordem-e-Servico\OsDsII.api\obj\Debug\net7.0\staticwebassets.development.json
+C:\Users\alevi\OneDrive\Área de Trabalho\Estudos\Ordem-e-Servico\OsDsII.api\obj\Debug\net7.0\scopedcss\bundle\OsDsII.api.styles.css
+C:\Users\alevi\OneDrive\Área de Trabalho\Estudos\Ordem-e-Servico\OsDsII.api\obj\Debug\net7.0\OsDsII.api.csproj.CopyComplete
+C:\Users\alevi\OneDrive\Área de Trabalho\Estudos\Ordem-e-Servico\OsDsII.api\obj\Debug\net7.0\OsDsII.api.dll
+C:\Users\alevi\OneDrive\Área de Trabalho\Estudos\Ordem-e-Servico\OsDsII.api\obj\Debug\net7.0\refint\OsDsII.api.dll
+C:\Users\alevi\OneDrive\Área de Trabalho\Estudos\Ordem-e-Servico\OsDsII.api\obj\Debug\net7.0\OsDsII.api.pdb
+C:\Users\alevi\OneDrive\Área de Trabalho\Estudos\Ordem-e-Servico\OsDsII.api\obj\Debug\net7.0\OsDsII.api.genruntimeconfig.cache
+C:\Users\alevi\OneDrive\Área de Trabalho\Estudos\Ordem-e-Servico\OsDsII.api\obj\Debug\net7.0\ref\OsDsII.api.dll

@@ -43,6 +43,22 @@ namespace OsDsII.api.Repositories
         public async Task<Customer> UpdateCustomerAsync(int id, [FromBody] Customer customer)
         {
             Customer currentCustomer = await _context.Customers.FirstOrDefaultAsync(customerBusca => customerBusca.Id == id);
+
+            currentCustomer.Name = customer.Name;
+            currentCustomer.Email = customer.Email;
+            currentCustomer.Phone = customer.Phone;
+            await _context.SaveChangesAsync();
+
+            return customer;
+        }
+
+        public async Task<Customer> DeleteCustomerAsync(int id)
+        {
+            Customer customer = await _context.Customers.FirstOrDefaultAsync(c => id == c.Id);
+
+            _context.Customers.Remove(customer);
+            await _context.SaveChangesAsync();
+            
             return customer;
         }
 

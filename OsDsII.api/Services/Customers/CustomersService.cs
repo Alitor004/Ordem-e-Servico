@@ -43,7 +43,7 @@ namespace OsDsII.api.Services
 
             if (currentCustomer != null)
             {
-                return BadRequest("Usuário já existe");
+                throw new Exception("Usuário já existe");
             }
             return newCustomer;
         }
@@ -52,10 +52,22 @@ namespace OsDsII.api.Services
         {
             Customer currentCustomer = await _custumersRepository.UpdateCustomerAsync(id, customer);
 
-            if (currentCustomer is null)
+            if (currentCustomer == null)
             {
                 throw new Exception("Not found");
             }
+            return customer;
+        }
+
+        public async Task<Customer> DeleteCustomerAsync(int id)
+        {
+            Customer customer = await _custumersRepository.DeleteCustomerAsync(id);
+
+            if (customer == null)
+            {
+                throw new Exception("Not found");
+            }
+
             return customer;
         }
     }

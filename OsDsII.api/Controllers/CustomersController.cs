@@ -98,11 +98,7 @@ namespace OsDsII.api.Controllers
             {
                 Customer currentCustomer = await _customersService.UpdateCustomerAsync(id, customer);
 
-                currentCustomer.Name = customer.Name;
-                currentCustomer.Email = customer.Email;
-                currentCustomer.Phone = customer.Phone;
-                await _context.SaveChangesAsync();
-                return Ok();
+                return Ok(customer);
             }
             catch (Exception ex)
             {
@@ -115,14 +111,8 @@ namespace OsDsII.api.Controllers
         {
             try
             {
-                Customer customer = await _context.Customers.FirstOrDefaultAsync(c => id == c.Id);
+                Customer customer = await _customersService.DeleteCustomerAsync(id);
 
-                if (customer is null)
-                {
-                    throw new Exception("Not found");
-                }
-                _context.Customers.Remove(customer);
-                await _context.SaveChangesAsync();
                 return Ok();
             }
             catch (Exception ex)
