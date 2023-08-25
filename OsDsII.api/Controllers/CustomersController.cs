@@ -20,7 +20,7 @@ namespace OsDsII.api.Controllers
 
     {
 
-        private readonly DataContext _dataContext;
+        private readonly DataContext _context;
 
         private readonly ICustomersService _customersService;
 
@@ -28,7 +28,7 @@ namespace OsDsII.api.Controllers
 
         {
 
-            _dataContext = dataContext;
+            _context = dataContext;
 
             _customersService = customersService;
 
@@ -81,12 +81,9 @@ namespace OsDsII.api.Controllers
         {
             try
             {
-                Customer existingCustomer = await _customersService.CreateCustomerAsync(c => c.Id == newCustomer.Id);
+                Customer existingCustomer = await _customersService.CreateCustomerAsync(newCustomer);
 
-                _context.Customers.Add(newCustomer);
-                await _context.SaveChangesAsync();
-
-                return newCustomer;
+                return Ok(newCustomer);
             }
             catch (Exception ex)
             {
@@ -104,7 +101,7 @@ namespace OsDsII.api.Controllers
                 currentCustomer.Name = customer.Name;
                 currentCustomer.Email = customer.Email;
                 currentCustomer.Phone = customer.Phone;
-                await _dataContext.SaveChangesAsync();
+                await _context.SaveChangesAsync();
                 return Ok();
             }
             catch (Exception ex)
@@ -118,14 +115,14 @@ namespace OsDsII.api.Controllers
         {
             try
             {
-                Customer customer = await _dataContext.Customers.FirstOrDefaultAsync(c => id == c.Id);
+                Customer customer = await _context.Customers.FirstOrDefaultAsync(c => id == c.Id);
 
                 if (customer is null)
                 {
                     throw new Exception("Not found");
                 }
-                _dataContext.Customers.Remove(customer);
-                await _dataContext.SaveChangesAsync();
+                _context.Customers.Remove(customer);
+                await _context.SaveChangesAsync();
                 return Ok();
             }
             catch (Exception ex)

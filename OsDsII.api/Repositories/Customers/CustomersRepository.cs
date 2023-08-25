@@ -32,7 +32,10 @@ namespace OsDsII.api.Repositories
 
         public async Task<Customer> CreateCustomerAsync([FromBody] Customer newCustomer)
         {
-            Customer currentCustomer = await _context.Customers.FirstOrDefaultAsync(newCustomer);
+            Customer currentCustomer = await _context.Customers.FirstOrDefaultAsync(c => c.Id == newCustomer.Id);
+            
+            _context.Customers.Add(newCustomer);
+            await _context.SaveChangesAsync();
             
             return newCustomer;
         }

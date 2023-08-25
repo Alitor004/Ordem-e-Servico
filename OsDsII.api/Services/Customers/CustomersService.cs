@@ -32,7 +32,7 @@ namespace OsDsII.api.Services
             Customer customer = await _custumersRepository.GetCustomerByIdAsync(id);
             if (customer == null)
             {
-                return NotFound();
+                throw new Exception("Not Found");
             }
             return customer;
         }
