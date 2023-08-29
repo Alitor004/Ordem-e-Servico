@@ -94,3 +94,46 @@ C:\Users\alevi\OneDrive\Área de Trabalho\Estudos\Ordem-e-Servico\OsDsII.api\obj
 C:\Users\alevi\OneDrive\Área de Trabalho\Estudos\Ordem-e-Servico\OsDsII.api\obj\Debug\net7.0\OsDsII.api.pdb
 C:\Users\alevi\OneDrive\Área de Trabalho\Estudos\Ordem-e-Servico\OsDsII.api\obj\Debug\net7.0\OsDsII.api.genruntimeconfig.cache
 C:\Users\alevi\OneDrive\Área de Trabalho\Estudos\Ordem-e-Servico\OsDsII.api\obj\Debug\net7.0\ref\OsDsII.api.dll
+A:\Alex DS3\DS2\Ordem-e-Servico\OsDsII.api\bin\Debug\net7.0\appsettings.Development.json
+A:\Alex DS3\DS2\Ordem-e-Servico\OsDsII.api\bin\Debug\net7.0\appsettings.json
+A:\Alex DS3\DS2\Ordem-e-Servico\OsDsII.api\bin\Debug\net7.0\OsDsII.api.exe
+A:\Alex DS3\DS2\Ordem-e-Servico\OsDsII.api\bin\Debug\net7.0\OsDsII.api.deps.json
+A:\Alex DS3\DS2\Ordem-e-Servico\OsDsII.api\bin\Debug\net7.0\OsDsII.api.runtimeconfig.json
+A:\Alex DS3\DS2\Ordem-e-Servico\OsDsII.api\bin\Debug\net7.0\OsDsII.api.dll
+A:\Alex DS3\DS2\Ordem-e-Servico\OsDsII.api\bin\Debug\net7.0\OsDsII.api.pdb
+A:\Alex DS3\DS2\Ordem-e-Servico\OsDsII.api\bin\Debug\net7.0\Humanizer.dll
+A:\Alex DS3\DS2\Ordem-e-Servico\OsDsII.api\bin\Debug\net7.0\Microsoft.AspNetCore.OpenApi.dll
+A:\Alex DS3\DS2\Ordem-e-Servico\OsDsII.api\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.dll
+A:\Alex DS3\DS2\Ordem-e-Servico\OsDsII.api\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+A:\Alex DS3\DS2\Ordem-e-Servico\OsDsII.api\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Design.dll
+A:\Alex DS3\DS2\Ordem-e-Servico\OsDsII.api\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Relational.dll
+A:\Alex DS3\DS2\Ordem-e-Servico\OsDsII.api\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
+A:\Alex DS3\DS2\Ordem-e-Servico\OsDsII.api\bin\Debug\net7.0\Microsoft.OpenApi.dll
+A:\Alex DS3\DS2\Ordem-e-Servico\OsDsII.api\bin\Debug\net7.0\Mono.TextTemplating.dll
+A:\Alex DS3\DS2\Ordem-e-Servico\OsDsII.api\bin\Debug\net7.0\MySqlConnector.dll
+A:\Alex DS3\DS2\Ordem-e-Servico\OsDsII.api\bin\Debug\net7.0\Pomelo.EntityFrameworkCore.MySql.dll
+A:\Alex DS3\DS2\Ordem-e-Servico\OsDsII.api\bin\Debug\net7.0\Swashbuckle.AspNetCore.Swagger.dll
+A:\Alex DS3\DS2\Ordem-e-Servico\OsDsII.api\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+A:\Alex DS3\DS2\Ordem-e-Servico\OsDsII.api\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+A:\Alex DS3\DS2\Ordem-e-Servico\OsDsII.api\bin\Debug\net7.0\System.CodeDom.dll
+A:\Alex DS3\DS2\Ordem-e-Servico\OsDsII.api\obj\Debug\net7.0\OsDsII.api.csproj.AssemblyReference.cache
+A:\Alex DS3\DS2\Ordem-e-Servico\OsDsII.api\obj\Debug\net7.0\OsDsII.api.GeneratedMSBuildEditorConfig.editorconfig
+A:\Alex DS3\DS2\Ordem-e-Servico\OsDsII.api\obj\Debug\net7.0\OsDsII.api.AssemblyInfoInputs.cache
+A:\Alex DS3\DS2\Ordem-e-Servico\OsDsII.api\obj\Debug\net7.0\OsDsII.api.AssemblyInfo.cs
+A:\Alex DS3\DS2\Ordem-e-Servico\OsDsII.api\obj\Debug\net7.0\OsDsII.api.csproj.CoreCompileInputs.cache
+A:\Alex DS3\DS2\Ordem-e-Servico\OsDsII.api\obj\Debug\net7.0\OsDsII.api.MvcApplicationPartsAssemblyInfo.cs
+A:\Alex DS3\DS2\Ordem-e-Servico\OsDsII.api\obj\Debug\net7.0\OsDsII.api.MvcApplicationPartsAssemblyInfo.cache
+A:\Alex DS3\DS2\Ordem-e-Servico\OsDsII.api\obj\Debug\net7.0\staticwebassets\msbuild.OsDsII.api.Microsoft.AspNetCore.StaticWebAssets.props
+A:\Alex DS3\DS2\Ordem-e-Servico\OsDsII.api\obj\Debug\net7.0\staticwebassets\msbuild.build.OsDsII.api.props
+A:\Alex DS3\DS2\Ordem-e-Servico\OsDsII.api\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.OsDsII.api.props
+A:\Alex DS3\DS2\Ordem-e-Servico\OsDsII.api\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.OsDsII.api.props
+A:\Alex DS3\DS2\Ordem-e-Servico\OsDsII.api\obj\Debug\net7.0\staticwebassets.pack.json
+A:\Alex DS3\DS2\Ordem-e-Servico\OsDsII.api\obj\Debug\net7.0\staticwebassets.build.json
+A:\Alex DS3\DS2\Ordem-e-Servico\OsDsII.api\obj\Debug\net7.0\staticwebassets.development.json
+A:\Alex DS3\DS2\Ordem-e-Servico\OsDsII.api\obj\Debug\net7.0\scopedcss\bundle\OsDsII.api.styles.css
+A:\Alex DS3\DS2\Ordem-e-Servico\OsDsII.api\obj\Debug\net7.0\OsDsII.api.csproj.CopyComplete
+A:\Alex DS3\DS2\Ordem-e-Servico\OsDsII.api\obj\Debug\net7.0\OsDsII.api.dll
+A:\Alex DS3\DS2\Ordem-e-Servico\OsDsII.api\obj\Debug\net7.0\refint\OsDsII.api.dll
+A:\Alex DS3\DS2\Ordem-e-Servico\OsDsII.api\obj\Debug\net7.0\OsDsII.api.pdb
+A:\Alex DS3\DS2\Ordem-e-Servico\OsDsII.api\obj\Debug\net7.0\OsDsII.api.genruntimeconfig.cache
+A:\Alex DS3\DS2\Ordem-e-Servico\OsDsII.api\obj\Debug\net7.0\ref\OsDsII.api.dll

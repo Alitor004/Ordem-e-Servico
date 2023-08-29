@@ -5,6 +5,8 @@ using OsDsII.api.Repositories.Interfaces;
 using OsDsII.api.Repositories;
 using OsDsII.api.Services.Interfaces;
 using OsDsII.api.Services;
+using OsDsII.api.Repositories.UnitOfWork;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,6 +19,7 @@ builder.Services.AddDbContext<DataContext>(options =>
 
 builder.Services.AddScoped<ICustomersRepository, CustumersRepository>();
 builder.Services.AddScoped<ICustomersService, CustumersService>();
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
 // Add services to the container.
 

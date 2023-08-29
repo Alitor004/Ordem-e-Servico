@@ -20,15 +20,12 @@ namespace OsDsII.api.Controllers
 
     {
 
-        private readonly DataContext _context;
 
         private readonly ICustomersService _customersService;
 
         public CustomersController(DataContext dataContext, ICustomersService customersService)
 
         {
-
-            _context = dataContext;
 
             _customersService = customersService;
 
@@ -39,25 +36,16 @@ namespace OsDsII.api.Controllers
         public async Task<IActionResult> GetAllAsync()
 
         {
-
             try
-
             {
-
                 IEnumerable<Customer> customers = await _customersService.GetAllCustomersAsync();
 
                 return Ok(customers);
-
             }
-
             catch (Exception ex)
-
             {
-
                 return BadRequest(ex.Message);
-
             }
-
         }
 
         [HttpGet("{id}")]
@@ -77,13 +65,13 @@ namespace OsDsII.api.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> CreateCustomer([FromBody] Customer newCustomer)
+        public async Task<IActionResult> CreateCustomer([FromBody] Customer customer)
         {
             try
             {
-                Customer existingCustomer = await _customersService.CreateCustomerAsync(newCustomer);
+                Customer currentCustomer = await _customersService.CreateCustomerAsync(customer);
 
-                return Ok(newCustomer);
+                return Ok(customer);
             }
             catch (Exception ex)
             {
@@ -97,8 +85,7 @@ namespace OsDsII.api.Controllers
             try
             {
                 Customer currentCustomer = await _customersService.UpdateCustomerAsync(id, customer);
-
-                return Ok(customer);
+                return Ok();
             }
             catch (Exception ex)
             {
