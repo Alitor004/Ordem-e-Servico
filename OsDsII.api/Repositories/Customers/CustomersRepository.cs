@@ -1,19 +1,15 @@
-using Microsoft.AspNetCore.Http.HttpResults;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.AspNetCore.Mvc;
-
 using OsDsII.api.Data;
 using OsDsII.api.Models;
 using OsDsII.api.Repositories.Interfaces;
 
 namespace OsDsII.api.Repositories
 {
-    public class CustumersRepository : ICustomersRepository
+    public class CustomersRepository : ICustomersRepository
     {
         private readonly DataContext _context;
 
-        public CustumersRepository(DataContext context)
+        public CustomersRepository(DataContext context)
         {
             _context = context;
         }
@@ -39,7 +35,10 @@ namespace OsDsII.api.Repositories
             _context.Customers.Remove(customer);
         }
 
-
+        public async Task<Customer> GetCustomerByEmailAsync(string email)
+        {
+            return await _context.Customers.FirstOrDefaultAsync(c => c.Email == email);
+        }
 
     }
 }

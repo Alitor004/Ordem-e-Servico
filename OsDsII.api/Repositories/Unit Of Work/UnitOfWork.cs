@@ -7,13 +7,13 @@ namespace OsDsII.api.Repositories.UnitOfWork
     {
         private readonly DataContext _context;
 
-        public UnitOfWork(dataContext context)
+        public UnitOfWork(DataContext context)
         {
             _context = context;
         }
         public async Task SaveChangesAsync()
         {
             await _context.SaveChangesAsync();
-        } 
-    }    
+        }
+    }
 }

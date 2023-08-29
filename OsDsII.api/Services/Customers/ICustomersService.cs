@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using OsDsII.api.Models;
 
-namespace OsDsII.api.Services.Interfaces
+namespace OsDsII.api.Services
 {
     public interface ICustomersService
     {

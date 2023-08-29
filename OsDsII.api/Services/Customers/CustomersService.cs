@@ -3,34 +3,33 @@ using Microsoft.AspNetCore.Mvc;
 
 using OsDsII.api.Data;
 using OsDsII.api.Models;
-using OsDsII.api.Services.Interfaces;
 using OsDsII.api.Repositories.Interfaces;
 using OsDsII.api.Repositories.UnitOfWork;
 using Microsoft.AspNetCore.Http.HttpResults;
 
 namespace OsDsII.api.Services
 {
-    public class CustumersService : ICustomersService
+    public class CustomersService : ICustomersService
     {
         private readonly IUnitOfWork _unitOfWork;
 
-        private readonly ICustomersRepository _custumersRepository;
+        private readonly ICustomersRepository _customersRepository;
 
-        public CustumersService(ICustomersRepository customersRepository, IUnitOfWork unitOfWork)
+        public CustomersService(ICustomersRepository customersRepository, IUnitOfWork unitOfWork)
         {
-            _custumersRepository = customersRepository;
+            _customersRepository = customersRepository;
             _unitOfWork = unitOfWork;
         }
 
         public async Task<IEnumerable<Customer>> GetAllCustomersAsync()
         {
-            IEnumerable<Customer> customers = await _custumersRepository.GetAllCustomersAsync();
+            IEnumerable<Customer> customers = await _customersRepository.GetAllCustomersAsync();
             return customers;
         }
 
         public async Task<Customer> GetCustomerByIdAsync(int id)
         {
-            Customer customer = await _custumersRepository.GetCustomerByIdAsync(id);
+            Customer customer = await _customersRepository.GetCustomerByIdAsync(id);
             if (customer == null)
             {
                 throw new Exception("Not Found");
@@ -40,19 +39,19 @@ namespace OsDsII.api.Services
 
         public async Task<Customer> CreateCustomerAsync(Customer customer)
         {
-            Customer currentCustomer = await _custumersRepository.GetCustomerByIdAsync(customer.Id);
+            Customer currentCustomer = await _customersRepository.GetCustomerByEmailAsync(customer.Email);
             if (currentCustomer != null && currentCustomer.Equals(customer))
             {
                 throw new Exception("Customer already exists.");
             }
-            await _custumersRepository.CreateCustomerAsync(customer);
+            await _customersRepository.CreateCustomerAsync(customer);
             await _unitOfWork.SaveChangesAsync();
             return currentCustomer;
         }
 
         public async Task<Customer> UpdateCustomerAsync(int id, Customer customer)
         {
-            Customer currentCustomer = await _custumersRepository.GetCustomerByIdAsync(id);
+            Customer currentCustomer = await _customersRepository.GetCustomerByIdAsync(id);
             if (currentCustomer == null)
             {
                 throw new Exception("Not found");
@@ -68,8 +67,8 @@ namespace OsDsII.api.Services
 
         public async Task<Customer> DeleteCustomerAsync(int id, Customer customer)
         {
-            Customer currentCustomer = await _custumersRepository.GetCustomerByIdAsync(id);
-            await _custumersRepository.RemoveCustomer(id, customer);
+            Customer currentCustomer = await _customersRepository.GetCustomerByIdAsync(id);
+            await _customersRepository.RemoveCustomer(id, customer);
             await _unitOfWork.SaveChangesAsync();
 
             return customer;

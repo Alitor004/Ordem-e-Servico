@@ -1,12 +1,8 @@
 using Microsoft.EntityFrameworkCore;
-
 using Microsoft.AspNetCore.Mvc;
-
 using OsDsII.api.Data;
-
 using OsDsII.api.Models;
-
-using OsDsII.api.Services.Interfaces;
+using OsDsII.api.Services;
 
 namespace OsDsII.api.Controllers
 
@@ -19,20 +15,15 @@ namespace OsDsII.api.Controllers
     public class CustomersController : ControllerBase
 
     {
-
-
         private readonly ICustomersService _customersService;
 
         public CustomersController(DataContext dataContext, ICustomersService customersService)
 
         {
-
             _customersService = customersService;
-
         }
 
         [HttpGet]
-
         public async Task<IActionResult> GetAllAsync()
 
         {
@@ -49,7 +40,6 @@ namespace OsDsII.api.Controllers
         }
 
         [HttpGet("{id}")]
-
         public async Task<IActionResult> GetCustomerByIdAsync(int id)
         {
             try
@@ -98,9 +88,10 @@ namespace OsDsII.api.Controllers
         {
             try
             {
-                Customer customer = await _customersService.DeleteCustomerAsync(id);
+                Customer customer = await _customersService.GetCustomerByIdAsync(id);
+                await _customersService.DeleteCustomerAsync(id, customer);
 
-                return Ok();
+                return NoContent();
             }
             catch (Exception ex)
             {
