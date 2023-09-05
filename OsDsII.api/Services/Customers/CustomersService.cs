@@ -6,6 +6,7 @@ using OsDsII.api.Models;
 using OsDsII.api.Repositories.Interfaces;
 using OsDsII.api.Repositories.UnitOfWork;
 using Microsoft.AspNetCore.Http.HttpResults;
+using OsDsII.api.Exceptions;
 
 namespace OsDsII.api.Services
 {
@@ -32,7 +33,7 @@ namespace OsDsII.api.Services
             Customer customer = await _customersRepository.GetCustomerByIdAsync(id);
             if (customer == null)
             {
-                throw new Exception("Not Found");
+                throw new NotFoundException("Not Found");
             }
             return customer;
         }
@@ -54,7 +55,7 @@ namespace OsDsII.api.Services
             Customer currentCustomer = await _customersRepository.GetCustomerByIdAsync(id);
             if (currentCustomer == null)
             {
-                throw new Exception("Not found");
+                throw new NotFoundException("Not found");
             }
 
             currentCustomer.Name = customer.Name;
