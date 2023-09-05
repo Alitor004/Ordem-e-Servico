@@ -65,10 +65,10 @@ namespace OsDsII.api.Services
             return customer;
         }
 
-        public async Task<Customer> DeleteCustomerAsync(int id, Customer customer)
+        public async Task<Customer> RemoveCustomer(int id, Customer customer)
         {
             Customer currentCustomer = await _customersRepository.GetCustomerByIdAsync(id);
-            await _customersRepository.RemoveCustomer(id, customer);
+            await _customersRepository.RemoveCustomer(customer);
             await _unitOfWork.SaveChangesAsync();
 
             return customer;

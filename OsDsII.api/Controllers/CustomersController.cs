@@ -84,12 +84,12 @@ namespace OsDsII.api.Controllers
         }
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteCustomerAsync(int id)
+        public async Task<IActionResult> RemoveCustomer(int id)
         {
             try
             {
                 Customer customer = await _customersService.GetCustomerByIdAsync(id);
-                await _customersService.DeleteCustomerAsync(id, customer);
+                await _customersService.RemoveCustomer(id, customer);
 
                 return NoContent();
             }

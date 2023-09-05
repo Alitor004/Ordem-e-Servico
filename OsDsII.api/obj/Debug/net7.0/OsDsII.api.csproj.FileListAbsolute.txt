@@ -137,3 +137,4 @@ A:\Alex DS3\DS2\Ordem-e-Servico\OsDsII.api\obj\Debug\net7.0\refint\OsDsII.api.dl
 A:\Alex DS3\DS2\Ordem-e-Servico\OsDsII.api\obj\Debug\net7.0\OsDsII.api.pdb
 A:\Alex DS3\DS2\Ordem-e-Servico\OsDsII.api\obj\Debug\net7.0\OsDsII.api.genruntimeconfig.cache
 A:\Alex DS3\DS2\Ordem-e-Servico\OsDsII.api\obj\Debug\net7.0\ref\OsDsII.api.dll
+A:\Alex DS3\DS2\Ordem-e-Servico\OsDsII.api\bin\Debug\net7.0\Newtonsoft.Json.dll

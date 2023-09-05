@@ -13,6 +13,6 @@ namespace OsDsII.api.Services
 
         public Task<Customer> UpdateCustomerAsync(int id, Customer customer);
 
-        public Task<Customer> DeleteCustomerAsync(int id, Customer customer);
+        public Task<Customer> RemoveCustomer(int id, Customer customer);
     }
 }
