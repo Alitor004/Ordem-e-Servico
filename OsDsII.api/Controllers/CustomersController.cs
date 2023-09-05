@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using OsDsII.api.Data;
 using OsDsII.api.Models;
 using OsDsII.api.Services;
+using OsDsII.api.Exceptions;
 
 namespace OsDsII.api.Controllers
 
@@ -33,9 +34,9 @@ namespace OsDsII.api.Controllers
 
                 return Ok(customers);
             }
-            catch (Exception ex)
+            catch (BaseException ex)
             {
-                return BadRequest(ex.Message);
+                return ex.GetResponse();
             }
         }
 
@@ -48,9 +49,9 @@ namespace OsDsII.api.Controllers
 
                 return Ok(customer);
             }
-            catch (Exception ex)
+            catch (BaseException ex)
             {
-                return BadRequest(ex.Message);
+                return ex.GetResponse();
             }
         }
 
@@ -63,9 +64,9 @@ namespace OsDsII.api.Controllers
 
                 return Ok(customer);
             }
-            catch (Exception ex)
+            catch (BaseException ex)
             {
-                return BadRequest(ex.Message);
+                return ex.GetResponse();
             }
         }
 
@@ -77,9 +78,9 @@ namespace OsDsII.api.Controllers
                 Customer currentCustomer = await _customersService.UpdateCustomerAsync(id, customer);
                 return Ok();
             }
-            catch (Exception ex)
+            catch (BaseException ex)
             {
-                return BadRequest(ex.Message);
+                return ex.GetResponse();
             }
         }
 
@@ -93,9 +94,9 @@ namespace OsDsII.api.Controllers
 
                 return NoContent();
             }
-            catch (Exception ex)
+            catch (BaseException ex)
             {
-                return BadRequest(ex.Message);
+                return ex.GetResponse();
             }
         }
 
