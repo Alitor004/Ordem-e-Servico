@@ -2,6 +2,8 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Diagnostics.CodeAnalysis;
 using Microsoft.EntityFrameworkCore;
+using OsDsII.api.Dto;
+using OsDsII.api.Dto.Builder;
 
 namespace OsDsII.api.Models
 {
@@ -32,5 +34,15 @@ namespace OsDsII.api.Models
         [StringLength(20)]
         [Required]
         public string Phone { get; set; }
+
+        public CustomerDto ToCustomer()
+        {
+            CustomerDto customerDto = new CustomerDtoBuilder()
+                .WithName(Name)
+                .WithEmail(Email)
+                .WithPhone(Phone)
+                .Build();
+            return customerDto;
+        }
     }
 }

@@ -1495,11 +1495,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "A:\\Alex DS3\\DS2\\Ordem-e-Servico\\OsDsII.api\\OsDsII.api.csproj",
+      "projectUniqueName": "D:\\Alex DS3\\DS2\\Ordem-e-Servico\\OsDsII.api\\OsDsII.api.csproj",
       "projectName": "OsDsII.api",
-      "projectPath": "A:\\Alex DS3\\DS2\\Ordem-e-Servico\\OsDsII.api\\OsDsII.api.csproj",
+      "projectPath": "D:\\Alex DS3\\DS2\\Ordem-e-Servico\\OsDsII.api\\OsDsII.api.csproj",
       "packagesPath": "C:\\Users\\etechas\\.nuget\\packages\\",
-      "outputPath": "A:\\Alex DS3\\DS2\\Ordem-e-Servico\\OsDsII.api\\obj\\",
+      "outputPath": "D:\\Alex DS3\\DS2\\Ordem-e-Servico\\OsDsII.api\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

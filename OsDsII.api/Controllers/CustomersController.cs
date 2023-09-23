@@ -4,6 +4,8 @@ using OsDsII.api.Data;
 using OsDsII.api.Models;
 using OsDsII.api.Services;
 using OsDsII.api.Exceptions;
+using OsDsII.api.Dto;
+using OsDsII.api.Http;
 
 namespace OsDsII.api.Controllers
 
@@ -31,8 +33,9 @@ namespace OsDsII.api.Controllers
             try
             {
                 IEnumerable<Customer> customers = await _customersService.GetAllCustomersAsync();
+                IEnumerable<CustomerDto> customersDto = customers.Select(c => c.ToCustomer());
 
-                return Ok(customers);
+                return HttpResponseApi<IEnumerable<CustomerDto>>.Ok(customersDto);
             }
             catch (BaseException ex)
             {
@@ -46,8 +49,9 @@ namespace OsDsII.api.Controllers
             try
             {
                 Customer customer = await _customersService.GetCustomerByIdAsync(id);
+                CustomerDto customerDto = customer.ToCustomer();
 
-                return Ok(customer);
+                return HttpResponseApi<CustomerDto>.Ok(customerDto);
             }
             catch (BaseException ex)
             {
@@ -61,8 +65,9 @@ namespace OsDsII.api.Controllers
             try
             {
                 Customer currentCustomer = await _customersService.CreateCustomerAsync(customer);
+                CustomerDto customerDto = currentCustomer.ToCustomer();
 
-                return Ok(customer);
+                return HttpResponseApi<CustomerDto>.Created(customerDto);
             }
             catch (BaseException ex)
             {
@@ -76,7 +81,9 @@ namespace OsDsII.api.Controllers
             try
             {
                 Customer currentCustomer = await _customersService.UpdateCustomerAsync(id, customer);
-                return Ok();
+                CustomerDto customerDto = currentCustomer.ToCustomer();
+
+                return HttpResponseApi<CustomerDto>.Ok(customerDto);
             }
             catch (BaseException ex)
             {
@@ -92,7 +99,9 @@ namespace OsDsII.api.Controllers
                 Customer customer = await _customersService.GetCustomerByIdAsync(id);
                 await _customersService.RemoveCustomer(id, customer);
 
-                return NoContent();
+                CustomerDto customerDto = customer.ToCustomer();
+
+                return HttpResponseApi<CustomerDto>.NoContent();
             }
             catch (BaseException ex)
             {
